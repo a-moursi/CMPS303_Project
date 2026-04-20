@@ -1,5 +1,10 @@
 
 public class Student {
 
-	// test halat
+	int id;
+	String name;
+	
+	public Student(){
+		
+	}
 }
