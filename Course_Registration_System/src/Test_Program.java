@@ -5,31 +5,48 @@ public class Test_Program {
 	public static void main(String[] args) {
 
 		startSystem();
+
 	}
 
-	//=================================================================
-	
-	private static void startSystem() {
-		
-		// should handle invalid inputs 
+	// =================================================================
+
+	private static void startSystem() { // should handle invalid inputs
 		Scanner sc = new Scanner(System.in);
-		printMenu();
-		int choice = sc.nextInt();
-		sc.close();
+		int choice = -1;
 
-		switch (choice) {
-		case 1 -> m1();
-		case 2 -> m2();
-		case 3 -> m3();
-		case 4 -> m4();
-		case 5 -> m5();
-		case 6 -> m6();
-		case 7 -> m7();
+		while (choice != 7) {
+			printMenu();
 
-		default -> throw new IllegalArgumentException("Invalid Choice: " + choice);
+			if (!sc.hasNextInt()) {
+				System.out.println("\nInvalid input!\n");
+				sc.nextLine();
+				continue;
+			}
+			choice = sc.nextInt();
+			sc.nextLine();
+			
+			if (choice < 1 || choice > 7) {
+                System.out.println("\nChoice must be [1-7]\n");
+                continue;
+            }
+
+			switch (choice) {
+			case 1 -> m1();
+			case 2 -> m2();
+			case 3 -> m3();
+			case 4 -> m4();
+			case 5 -> m5();
+			case 6 -> m6();
+			case 7 -> System.out.println("\nShutting down system...");
+
+			default -> throw new IllegalArgumentException("Invalid Choice: " + choice);
+			}
 		}
+
+		exit();
+		sc.close();
 	}
-	
+
 	private static void printMenu() {
 
 		System.out.println("====== Course Registration System ======\n");
@@ -83,13 +100,12 @@ public class Test_Program {
 
 	}
 
-	private static void m7() {
+	private static void exit() {
 
 		// save the data structure object “TreeHashTable”
 		// file (Object serialization)
 
-		System.out.println("Shutting down system...");
-	    System.exit(0);
+		System.exit(0);
 	}
 
 }
