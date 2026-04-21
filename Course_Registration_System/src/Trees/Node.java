@@ -1,6 +1,8 @@
 package Trees;
 
-public class Node <E> {
+import java.io.Serializable;
+
+public class Node <E> implements Serializable{
 	int key;
 	E data;
 	Node<E> leftChild;

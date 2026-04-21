@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class TreeHashTable {
+public class TreeHashTable implements Serializable{
 
 	// Constructor
 	TreeHashTable() {
@@ -11,6 +12,8 @@ public class TreeHashTable {
 	public int hashFunc(int key) {
 		return 0;
 	}
+	
+	//======================================================================================
 
 	// inserts a course to the table.
 	public void addCourse(Course c) {
@@ -20,7 +23,7 @@ public class TreeHashTable {
 	// returns a course, the course that its CRN=k, or returns null if no such
 	// course
 	public Course search(int k) { //
-		Course result = new Course();
+		Course result = null;
 
 		return result;
 	}

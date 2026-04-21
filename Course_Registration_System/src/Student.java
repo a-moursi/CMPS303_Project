@@ -1,10 +1,12 @@
+import java.io.Serializable;
 
-public class Student {
+public class Student implements Serializable{
 
 	int id;
-	String name;
+	String sName;
 	
-	public Student(){
-		
+	public Student(int id, String sName){
+		this.id = id;
+		this.sName = sName;
 	}
 }
