@@ -1,6 +1,8 @@
 package Trees;
 
-public class Tree<E> {
+import java.io.Serializable;
+
+public class Tree<E> implements Serializable{
  private Node<E> root;
  public E search(int k)
  {

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 public class Student {
+=======
+import java.io.Serializable;
 
+public class Student implements Serializable{
+>>>>>>> branch 'main' of https://github.com/a-moursi/CMPS303_Project.git
+
+<<<<<<< HEAD
     private int id;
     private String name;
 
@@ -16,3 +23,13 @@ public class Student {
         return "Student{id=" + id + ", name='" + name + "'}";
     }
 }
+=======
+	int id;
+	String sName;
+	
+	public Student(int id, String sName){
+		this.id = id;
+		this.sName = sName;
+	}
+}
+>>>>>>> branch 'main' of https://github.com/a-moursi/CMPS303_Project.git
