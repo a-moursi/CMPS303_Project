@@ -25,6 +25,60 @@ public class Course implements Serializable{
 		this.cName = name;
 		this.capacity = capacity;
 	}
-	
+
+	public int getCRN() {
+		return crn;
+	}
+
+	public void setCRN(int crn) {
+		this.crn = crn;
+	}
+
+	public String getcName() {
+		return cName;
+	}
+
+	public void setcName(String cName) {
+		this.cName = cName;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public Tree<Student> getEnrolled() {
+		return enrolled;
+	}
+
+	public void setEnrolled(Tree<Student> enrolled) {
+		this.enrolled = enrolled;
+	}
+
+	public Queue<Student> getWaitingList() {
+		return waitingList;
+	}
+
+	public void setWaitingList(Queue<Student> waitingList) {
+		this.waitingList = waitingList;
+	}
+
+	public void enrollStudent(Student dequeue) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void dropStudent(int studentId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getEnrolledCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
