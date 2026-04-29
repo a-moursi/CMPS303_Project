@@ -66,18 +66,16 @@ public class Course implements Serializable{
 		this.waitingList = waitingList;
 	}
 
-	public void enrollStudent(Student dequeue) {
-		// TODO Auto-generated method stub
+	public void enrollStudent(Student s) {
+		enrolled.insert(s.getId(), s);
 		
 	}
 
 	public void dropStudent(int studentId) {
-		// TODO Auto-generated method stub
-		
+		enrolled.delete(studentId);
 	}
 
 	public int getEnrolledCount() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 	

@@ -53,12 +53,12 @@ public class Test_Program {
 			}
 
 			switch (choice) {
-			case 1 -> m1(sys);
-			case 2 -> m2(sys);
-			case 3 -> m3(sys);
-			case 4 -> m4(sys);
-			case 5 -> m5(sys);
-			case 6 -> m6(sys);
+			case 1 -> addCourse(sys);
+			case 2 -> addStudent(sys);
+			case 3 -> dropStudent(sys);
+			case 4 -> raiseCapacity(sys);
+			case 5 -> displayStudents(sys);
+			case 6 -> displayCourses(sys);
 			case 7 -> System.out.println("\nShutting down system...");
 
 			default -> throw new IllegalArgumentException("Invalid Choice: " + choice);
@@ -77,7 +77,7 @@ public class Test_Program {
 		System.out.print("Choice > ");
 	}
 
-	private static void m1(TreeHashTable sys) {
+	private static void addCourse(TreeHashTable sys) {
 		int crn = 0;
 		String cName = null;
 		int capacity = 0;
@@ -90,7 +90,7 @@ public class Test_Program {
 
 	}
 
-	private static void m2(TreeHashTable sys) {
+	private static void addStudent(TreeHashTable sys) {
 		int crn = 0;
 		String sName = null;
 		int id = 0;
@@ -102,7 +102,7 @@ public class Test_Program {
 		sys.addStudent(crn, s);
 	}
 
-	private static void m3(TreeHashTable sys) {
+	private static void dropStudent(TreeHashTable sys) {
 		int crn = 0;
 		int id = 0;
 
@@ -112,7 +112,7 @@ public class Test_Program {
 		sys.dropStudent(crn, id);
 	}
 
-	private static void m4(TreeHashTable sys) {
+	private static void raiseCapacity(TreeHashTable sys) {
 		int crn = 0;
 		int r = 0;
 
@@ -122,7 +122,7 @@ public class Test_Program {
 		sys.raiseCapacity(crn, r);
 	}
 
-	private static void m5(TreeHashTable sys) {
+	private static void displayStudents(TreeHashTable sys) {
 		int crn = 0;
 
 		// ask for course CRN,
@@ -132,7 +132,7 @@ public class Test_Program {
 		sys.printStudents(crn);
 	}
 
-	private static void m6(TreeHashTable sys) {
+	private static void displayCourses(TreeHashTable sys) {
 		int id = 0;
 
 		// asks for student id,
